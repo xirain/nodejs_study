@@ -1,0 +1,50 @@
+extends ../layout
+
+block content
+   .container
+     .row
+        form.form-horizontal(method="post", action="/admin/fund/new")
+            input(type="hidden",name="fund[_id]", value=fund._id)
+            .form-group
+              label.col-sm-2.control-label(for="inputCategory") 基金分类
+              .col-sm-10
+                 input#inputTitile.form-control(type="text",name="fund[category]",value=fund.categoryName)
+            .form-group
+              label.col-sm-2.control-label  分类选择
+              .col-sm-10
+                each cat in categories
+                  label.radio-inline
+                    input(type="radio", name="fund[category]", value="#{cat._id}") 
+                    | #{cat.name}
+            .form-group
+              label.col-sm-2.control-label(for="inputName") 基金名字
+              .col-sm-10
+                 input#inputTitile.form-control(type="text",name="fund[name]",value=fund.name)
+            .form-group
+              label.col-sm-2.control-label(for="inputName") 基金代码
+              .col-sm-10
+                 input#inputTitile.form-control(type="text",name="fund[code]",value=fund.code)
+            .form-group
+              label.col-sm-2.control-label(for="inputManager") 基金经理
+              .col-sm-10
+                 input#inputTitile.form-control(type="text",name="fund[manager]",value=fund.manager)
+            .form-group
+              label.col-sm-2.control-label(for="inputTags") 基金标签
+              .col-sm-10
+                 input#inputTitile.form-control(type="text",name="fund[tags]",value=fund.tags)
+            .form-group
+              label.col-sm-2.control-label(for="inputYear") 年份
+              .col-sm-10
+                 input#inputTitile.form-control(type="text",name="fund[year]",value=fund.year)
+             .form-group
+              label.col-sm-2.control-label(for="inputIntroduction") 简介
+              .col-sm-10
+                 input#inputTitile.form-control(type="text",name="fund[introduction]",value=fund.introduction)
+             .form-group
+              label.col-sm-2.control-label(for="inputUrl") 基金官网
+              .col-sm-10
+                 input#inputTitile.form-control(type="text",name="fund[url]",value=fund.url)
+             .form-group
+                .col-sm-offset-2.col-sm-10
+                  button.btn.btn-default(type="submit") 录入 
+        

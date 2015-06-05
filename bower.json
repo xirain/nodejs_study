@@ -1,0 +1,19 @@
+{
+  "name": "nodejs",
+  "version": "0.0.0",
+  "authors": [
+    "xirain <wangy675@163.com>"
+  ],
+  "description": "movie",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "imooc"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}
